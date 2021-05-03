@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<title>Prompt Exercise</title>
+</head>
+<body>
+  <center>
+    <div class="container">
+      <h1>Prompt in javascript.</h1>
+    </div>
+  </center>
+  <div class="container">
+    <h2>Calculate simple  interest:</h2>
+    <div class="container bg-light">
+      <span id="amount"></span><br>
+      <span id="interestRate"></span><br>
+      <span id="years"></span><br>
+      <span id="simpleInterest"></span><br>
+      <button class="btn-lg bg-danger text-white" onclick="calculateSI()">Calculate SI</button>
+    </div>
+  </div>
+  <br><hr><br>
+  <div class="container" id="palindromeContainer">
+    <h2>Check string is Palindrome or not.</h2>
+    <p id="output"></p>
+    <button class="btn btn-danger text-white" onClick="checkPalindrome()">Check</button>
+  </div>
+  <br><hr><br>
+  <div class="container" id="AreaOfCircleContainer">
+    <h2>Calculate Area of circle.</h2>
+    <p id="areaOfCircle"></p>
+    <button class="btn btn-danger text-white" onClick="areaOfCircle()">Area</button>
+  </div>
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  function calculateSI(){
+    var amount = prompt("Please enter your Principle Amount", "0");
+    var interestRate = prompt("Please enter Interest Rate", "0");
+    var years = prompt("Please enter Total Years", "0");
+    document.getElementById("amount").innerHTML="Principle Amount:"+" "+amount;
+    document.getElementById("interestRate").innerHTML="Interest Rate:"+" "+interestRate+"%";
+    document.getElementById("years").innerHTML="Total Years:"+" "+years;
+    var simpleInterest = (amount*interestRate*years)/100;
+    document.getElementById("simpleInterest").innerHTML="Simple Interest: Rs"+simpleInterest;
+  };
+
+  function checkPalindrome(){
+    var string = prompt("Enter string");
+    const len = Math.floor(string.length/2);
+    for(i = 0; i < len; i++){
+      if (string[i] !== string[string.length - i - 1]) {
+        return document.getElementById("output").innerHTML="<span>"+string+" "+ "is not palindrome </span>";
+      }
+    }
+    return document.getElementById("output").innerHTML="<span>"+string+" "+ "is palindrome </span>";
+  };
+
+  function areaOfCircle(){
+    var radius = prompt("Enter Radius of Circle");
+    var area = 3.14*radius**2;
+    document.getElementById("areaOfCircle").innerHTML = "Area of Circle ="+" "+area;
+  };
+
+</script>
+</body>
+</html>

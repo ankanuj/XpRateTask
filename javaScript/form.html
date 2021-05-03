@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<title>Forms Js</title>
+</head>
+<body>
+  <center>
+  <div class="Contaner">
+    <h1>Form Exercise in Js.</h1>
+  </div>
+  </center>
+  <div class="container" id="formContainer" onmouseover="mouseOver()" onmouseout="mouseOut()">
+    <h2>Exercises:</h2>
+    <button onclick="getUserName()" class="btn bg-primary text-white">Get Username</button><br><br>
+    
+      <label class="form-text">User Name:</label>
+      <input type="text" id="userName" class="form-control" onchange="copyText()" required>
+      <label class="form-text">Second TextBox:</label>
+      <input type="text" id="copyUsername" class="form-control" required>
+      <form class="form-group" method="GET">
+      <label class="form-text">Age:</label>
+      <input type="text" id="userAge" class="form-control" required >
+      <br>
+      <button type="submit" class="btn btn-danger" onclick="submitForm()">Submit</button>
+    </form>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script>
+  function getUserName(){
+    var userName = prompt("Enter user name");
+    document.getElementById("userName").value = userName;
+  };
+
+  function copyText(){
+    var copyTextValue = document.getElementById("userName").value;
+    document.getElementById("copyUsername").value = copyTextValue;
+
+  };
+
+  function submitForm(){
+    var age = document.getElementById("userAge").value;
+    if(age>=18){
+      
+    }
+  };
+
+  function mouseOver() {
+    document.getElementById("formContainer").style.background = "red";
+  };
+
+  function mouseOut() {
+    document.getElementById("formContainer").style.background = "white";
+  };
+</script>
+</body>
+</html>

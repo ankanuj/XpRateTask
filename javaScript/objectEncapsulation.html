@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+  <center>
+    <div class="container">
+      <h1>Exercise 3 in js.</h1>
+      <h2>Create an Object named Clock and encapsulate all functions in it.</h2>
+    </div>
+  </center>
+  <div class="conrainer">
+    <div class="container" id="displayMethods"></div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script>
+  function displayMethods(){
+    var text =" ";
+    var clock = {
+      "Date()":"this method get current Date and time.",
+      "getDay()":"this method returns day no.(0-6)",
+      "getMonth()":"this method returns month no.(0-11)",
+      "getYear()":"this method returns year",
+      "getHour()":"this method returns current hour(0-23)",
+      "getMinutes()":"this method returns minutes(0-59)",
+      "getSeconds()":"this method returns current seconds(0-59)",
+      "getMilliseconds()":"this method returns milliseconds(0-999)",
+      "Date.now()":"this method return time.",
+      "getUTCDay()":"this method returns day no.(0-6),but in UTC",
+      "getUTCMonth()":"this method returns month no.(0-11),but in UTC",
+      "getUTCYear()":"this method returns year,but in UTC",
+      "getUTCHour()":"this method returns current hour(0-23),but in UTC",
+      "getUTCMinutes()":"this method returns minutes(0-59),but in UTC",
+      "getUTCSeconds()":"this method returns current seconds(0-59),but in UTC",
+      "getUTCMilliseconds()":"this method returns milliseconds(0-999), but in UTC",
+      "setDate()":"Set the day as a number (1-31)",
+      "setFullYear()":"Set the year (optionally month and day)",
+      "setHours()":"Set the hour (0-23)",
+      "setMilliseconds()":"Set the milliseconds (0-999)",
+      "setMinutes()":"Set the minutes (0-59)",
+      "setMonth()":"Set the month (0-11)",
+      "setSeconds()":"Set the seconds (0-59)",
+      "setTime()":"	Set the time (milliseconds since January 1, 1970)"
+    }
+    
+    for(key in clock){
+      text+= "<b>"+key+"</b>"+":"+" "+"<span style='color:green;'>"+clock[key]+"</span>"+"<br>";
+    }
+    document.getElementById("displayMethods").innerHTML = text;
+  };
+  
+  displayMethods();
+</script>
+</body>
+</html>
