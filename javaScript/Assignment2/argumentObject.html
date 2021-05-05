@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<title>Title</title>
+</head>
+<body>
+  <center>
+    <div class="container">
+      <h1>Argument Object and its properties.</h1>
+    </div>
+  </center>
+  <br>
+  <div class="container">
+    <h3>What is Argument Object?</h3>
+    <p>Arguments is an Array-like object accessible inside functions that contains the values 
+      of the arguments passed to that function.
+      <br>
+      The arguments object is a local variable available within all non-arrow functions. 
+      You can refer to a function's arguments inside that function by using its arguments object.
+      It has entries for each argument the function was called with, with the first entry's index at 0.
+    </p>
+    <p><b>For Example:  if a function is passed 3 arguments</b><br>
+      <div class="container bg-dark text-white pt-2 pb-2">
+        <p>arguments[0] // first argument<br>
+          arguments[1] // second argument<br>
+          arguments[2] // third argument</p>
+      </div>
+    </p>
+    <br>
+    <h3>Argument object properties.</h3>
+    <h4>1-> arguments.callee()</h4>
+    <p>callee is a property of the arguments object. It can be used to refer to the currently executing function inside the function body of that function. This is useful when the name of the function is unknown, 
+      such as within a function expression with no name (also called "anonymous functions").
+    </p>
+    <br>
+    <h4>2-> arguments.length()</h4>
+    <p>The arguments.length property provides the number of arguments actually passed to a function. 
+      This can be more or less than the defined parameter's count
+    </p>
+    <br>
+    <h4>3-> arguments[@@iterator]()</h4>
+    <p>The initial value of the @@iterator property is the same function object as the initial value of the Array.prototype.values property.
+    </p>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

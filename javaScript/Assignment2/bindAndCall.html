@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+  <center>
+    <div class="container">
+      <h1>Difference Between Bind And Call With Example.</h1>
+    </div>
+  </center>
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-6 bg-dark text-white pb-2">
+        <h3 class="text-center">Bind</h3>
+        <div class="container" id="bindContainer">
+          <h4>What is bind() in js?</h4>
+          <hr>
+          <p>The bind method creates a new function and sets the this keyword to the specified object.</p>
+          <span><b>Syntax:</b></span>
+          <p class="pt-2 pb-2 bg-light text-dark" style="padding-left: 10px;">function.bind(thisArg, optionalArguments)</p>
+          <span><b>For Example:</b></span>
+          <p>Let’s suppose we have two person objects.</p>
+          <div class="card text-dark" style=" padding-top: 10px; padding-left: 20px;">
+            <p>
+              const john = {<br>
+                name: 'John',<br>
+                age: 24,<br>
+              };<br>
+              const jane = {<br>
+                name: 'Jane',<br>
+                age: 22,<br>
+              };<br>
+            </p>
+          </div><br>
+          <p>Let’s add a greeting function:</p>
+          <div class="card text-dark" style=" padding-top: 10px; padding-left: 20px;">
+            <p>
+              function greeting() {<br>
+                console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);<br>
+              }
+            </p>
+          </div>
+          <br>
+          <p>We can use the bind method on the greeting function to bind the this 
+            keyword to john and jane objects. For example:
+          </p>
+          <div class="card text-dark" style=" padding-top: 10px; padding-left: 20px;">
+            <p>
+              const greetingJohn = greeting.bind(john);<br>.
+              // Hi, I am John and I am 24 years old<br>
+              greetingJohn();<br>
+              const greetingJane = greeting.bind(jane);<br>
+              // Hi, I am Jane and I am 22 years old<br>
+              greetingJane();<br>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--About Call method start from here-->
+      <div class="col-md-6 bg-dark text-white pb-2">
+        <h3 class="text-center">Call</h3>
+        <div class="container" id="bindContainer">
+          <h4>What is call() in js?</h4>
+          <hr>
+          <p>The call method sets the this inside the function and immediately executes that function.
+            <br>
+            <br>
+            The difference between call() and bind() is that the call() sets the "this" keyword and executes the function immediately and it does not create a new copy of the function,
+            while the bind() creates a copy of that function and sets the this keyword.
+          </p>
+          <span><b>Syntax:</b></span>
+          <p class="pt-2 pb-2 bg-light text-dark" style="padding-left: 10px;">
+            function.call(thisArg, arg1, agr2, ...)
+          </p>
+          <span><b>For Example:</b></span>
+          <div class="card text-dark" style=" padding-top: 10px; padding-left: 20px;">
+            <p>
+              function greeting() {<br>
+                console.log(`Hi, I am ${this.name} and I am ${this.age} years old`);<br>
+              }<br>
+              const john = {<br>
+                name: 'John',<br>
+                age: 24,<br>
+              };<br>
+              const jane = {<br>
+                name: 'Jane',<br>
+                age: 22,<br>
+              };<br>
+              // Hi, I am John and I am 24 years old<br>
+              greeting.call(john);<br>
+              // Hi, I am Jane and I am 22 years old<br>
+              greeting.call(jane);<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
