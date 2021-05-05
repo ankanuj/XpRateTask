@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+<center>
+  <h1>Instance of function</h1>
+  <h3>output in console</h3>
+</center>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<script>
+  function displayInstanceOf(){
+    let methods ={
+      obj:{1:1,2:2},
+      arr:['hi','bye'],
+      func:function displayNothing(){},
+      string:"anuj",  
+    }
+    console.log("method object is instance of Object",methods instanceof Object);
+    console.log("object is instance of Object",methods.obj instanceof Object);
+    console.log("Array is instance of Array",methods.arr instanceof Array);
+    console.log("function is instance of Function",methods.func instanceof Function);
+    console.log("typeof ",typeof(methods.string));
+    console.log("String instance of String",methods.func instanceof String);
+  };
+  displayInstanceOf();
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+<center>
+  <div class="container">
+    <h1>Counter Using closure.</h1>
+  </div>
+</center><br>
+<div class="container">
+  <h3>Example of counter using Closure</h3>
+  <div class="container bg-dark text-white pt-2 pb-2">
+    <p>suppose we have a function called displayName()<br>
+      and now we have to count how many time function called using closure.<br>
+      function displayName(){<br>
+        var counter = 0;<br>
+        function count(){<br>
+          counter += 1;<br>
+          document.getElementById("output").innerHTML = "No. of time function called is "+counter+" "+"times";<br>
+        }<br>
+        return count;<br>
+      };<br>
+      var display = displayName();<br>
+      display();<br>
+      display();<br>
+      <div class="container bg-light text-dark">
+        <span id="output"></span>
+      </div>
+    </p> 
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<script>
+  function displayName(){
+    var counter = 0;
+    function count(){
+      counter += 1;
+      document.getElementById("output").innerHTML = "Output: <br>"+"No. of time function called is "+counter+" "+"times";
+    }
+    return count;
+  };
+  var display = displayName();
+  console.log(display);
+  display();
+  display();
+</script>
+</body>
+</html>

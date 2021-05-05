@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<title>Title</title>
+</head>
+<body>
+  <center>
+    <div class="container">
+      <h1>5 Array methods</h1>
+    </div>
+  </center>
+  <br>
+  <div class="container">
+    <h3>1-> push(): this method push element into array</h3>
+    <p><b>For example:</b></p>
+    <div class="container bg-dark text-white pt-2 pb-2">
+      <p>let fruits = ["Apple","Mango","Banana"]<br>
+        //push grapes into the array<br>
+        fruits.push("Grapes");<br>
+        <div class="container bg-light text-dark" id="outputArray"></div>
+        <button class="btn bg-light" onClick="displayUpdatedPushedArray()">Run</button>
+      </p>
+    </div>
+    <br>
+    <h3>2-> pop(): this method removed element from array</h3>
+    <p><b>For example:</b></p>
+    <div class="container bg-dark text-white pt-2 pb-2">
+      <p>let fruits = ["Apple","Mango","Banana"]<br>
+        //pop Banana into the array<br>
+        fruits.pop("Banana");<br>
+        <div class="container bg-light text-dark" id="poppedArray"></div>
+        <button class="btn bg-light" onClick="displayUpdatedPopArray()">Run</button>
+      </p>
+    </div>
+    <br>
+    <h3>3-> splice(): This method can be used to add new items to an array</h3>
+    <p><b>For example:</b></p>
+    <div class="container bg-dark text-white pt-2 pb-2">
+      <p>let fruits = ["Apple","Mango","Banana"]<br>
+        //add lemon and kiwi at grapes into the array<br>
+        fruits.splice(2, 0, "Lemon", "Kiwi");<br>
+        <div class="container bg-light text-dark" id="splicedArray"></div>
+        <button class="btn bg-light" onClick="displayUpdatedSplicedArray()">Run</button>
+      </p>
+    </div>
+    <br>
+    <h3>4-> concat(): This method can be used to Merged to arrays</h3>
+    <p><b>For example:</b></p>
+    <div class="container bg-dark text-white pt-2 pb-2">
+      <p>let fruits = ["Apple","Mango","Banana"]<br>
+        let vegetables = ["tomato","potato","ladyfinger"]<br>
+        let eatableItems = fruits.concat(vegetables);
+        <div class="container bg-light text-dark" id="concatArray"></div>
+        <button class="btn bg-light" onClick="displayConcatArray()">Run</button>
+      </p>
+    </div>
+    <br>
+    <h3>5-> join(): This method is same as toString(), it joins all array element as a string but you can add separator.</h3>
+    <p><b>For example:</b></p>
+    <div class="container bg-dark text-white pt-2 pb-2">
+      <p>let fruits = ["Apple","Mango","Banana"]<br>
+        document.getElementById("demo").innerHTML = fruits.join(" * ");<br>
+        <div class="container bg-light text-dark" id="joinArray"></div>
+        <button class="btn bg-light" onClick="displayJoinArray()">Run</button>
+      </p>
+    </div>      
+  </div>
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<script>
+  function displayUpdatedPushedArray(){
+    let fruits = ["Apple","Mango","Banana"];
+    //push grapes into the array
+    fruits.push("Grapes");
+    document.getElementById("outputArray").innerHTML = "<p class='pt-2 pb-2'>"+"Updated Array : <br>"+"["+fruits+"]"+"</p>"
+  };
+
+  function displayUpdatedPopArray(){
+    let fruits = ["Apple","Mango","Banana"];
+    fruits.pop("Banana");
+    document.getElementById("poppedArray").innerHTML = "<p class='pt-2 pb-2'>"+"Updated Array : <br>"+"["+fruits+"]"+"</p>"
+  };
+
+  function displayUpdatedSplicedArray(){
+    let fruits = ["Apple","Mango","Banana"];
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById("splicedArray").innerHTML = "<p class='pt-2 pb-2'>"+"Updated Array : <br>"+"["+fruits+"]"+"</p>"
+  };
+
+  function displayConcatArray(){
+    let fruits = ["Apple","Mango","Banana"]
+    let vegetables = ["tomato","potato","ladyfinger"]
+    let eatableItems = fruits.concat(vegetables);
+    document.getElementById("concatArray").innerHTML = "<p class='pt-2 pb-2'>"+"Updated Array : <br>"+"["+eatableItems+"]"+"</p>"
+  };
+
+  function displayJoinArray(){
+    let fruits = ["Apple","Mango","Banana"]
+    document.getElementById("joinArray").innerHTML = "<p class='pt-2 pb-2'>"+fruits.join(" * ")+"</p>";
+  };
+</script>
+</body>
+</html>

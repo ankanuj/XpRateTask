@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<title>hierarchy</title>
+</head>
+<body>
+  <center>
+    <div class="Container">
+      <h1>Hierarchy Structure</h1>
+    </div>
+  </center>
+  <div class="contianer">
+    <h3 id="person"></h3>
+  </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+<script>
+  let person = {
+  fname: "Anuj",
+  lname: "chaudhary",
+  employee: [{
+    empId: "115566",
+    empNo: "1253548697",
+    developer: [{
+      developerRole: "SEintern",
+      developerProject: "training",
+      developerWorkTime: "9hr"
+      }] 
+    }]
+  }
+
+  document.getElementById("person").innerHTML=
+    "First Name:"+" "+person.fname+"<br>"+
+    "Last Name:"+" "+person.lname+"<br>"+
+    "Employee Id:"+" "+person.empId+"<br>"+
+    "Employee Number:"+" "+person.empNo+"<br>"+
+    "Developer Role:"+" "+person.developerRole+"<br>"+
+    "Developer Project:"+" "+person.developerProject+"<br>"+
+    "Developer Working hours:"+" "+person.developerWorkTime+"<br>";
+</script>
+</body>
+</html>
